@@ -13,10 +13,8 @@ Content-type: application/json
 }
 ###consulta de saldo
 GET http://localhost:8090/client/consulta_de_saldo?id=1
-Authorization:{{auth-token}}
 ###Retiro
 POST http://localhost:8090/client/retiro
-Authorization:{{auth-token}}
 Accept: application/json
 Content-type: application/json
 
@@ -33,14 +31,3 @@ Content-type: application/json
   "saldo": "100",
   "client_id": "1"
 }
-###
-POST http://localhost:8080/realms/cliente/protocol/openid-connect/token
-Content-Type: application/x-www-form-urlencoded
-
-response_type=code&grant_type=client_credentials&client_id=admin&client_secret=mcBD9HAaq9wUTsWFgShMtinCygNxWbke
-
-> {%
-    client.global.set("auth-token", "Bearer " + response.body["access_token"]);
-    client.log(client.global.get("auth-token"));
-%}
-###add_header
