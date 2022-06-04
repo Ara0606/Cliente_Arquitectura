@@ -11,8 +11,4 @@ public class ClienteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ClienteApplication.class, args);
 	}
-	@Bean
-	public KeycloakSpringBootConfigResolver keycloakConfigResolver() {
-		return new KeycloakSpringBootConfigResolver();
-	}
 }
