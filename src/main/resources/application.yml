@@ -5,25 +5,3 @@ spring:
     password: abc123
 server:
   port: 8090
-keycloak:
-  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL:http://localhost:8080/auth}
-  autodetect-bearer-only: true
-  resource: admin
-  credentials:
-    secret: mcBD9HAaq9wUTsWFgShMtinCygNxWbke
-  realm: cliente
-  securityConstraints:
-    - authRoles:
-        - ADMIN
-      security-collections:
-        -   omitted-methods:
-              - OPTIONS
-      securityCollections:
-        - name: REST API ADMIN
-          patterns:
-            - /client
-    - authRoles:
-        - SUBJECT
-
-  ssl-required: external
-  use-resource-role-mappings: false
