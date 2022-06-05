@@ -6,7 +6,7 @@ import microservicio.cliente.DTO.Saldo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-@CrossOrigin(origins = "http://localhost:8090/")
+@CrossOrigin(origins = "http://localhost:8070/")
 @RequestMapping("/client")
 @RestController
 public class ApiCliente {

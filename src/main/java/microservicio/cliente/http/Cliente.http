@@ -1,4 +1,4 @@
-##Crear nuevo cliente
+###Crear nuevo cliente
 POST http://localhost:8090/client/cliente
 Accept: application/json
 Content-type: application/json
@@ -24,6 +24,54 @@ Content-type: application/json
 }
 ###Deposito
 POST http://localhost:8090/client/deposito
+Accept: application/json
+Content-type: application/json
+
+{
+  "saldo": "100",
+  "client_id": "1"
+}
+
+
+
+
+
+###Crear nuevo cliente gateway
+POST http://localhost:8282/cliente/client/cliente
+Accept: application/json
+Content-type: application/json
+
+{
+  "first_name": "Ara2",
+  "last_name": "TorrezV",
+  "gender": "fem",
+  "age": "20",
+  "address": "Administrador 1",
+  "card_card_id": "2"
+}
+###consulta de saldo gateway
+GET http://localhost:8282/cliente/client/consulta_de_saldo?id=1
+###Retiro gateway
+POST http://localhost:8282/cliente/client/retiro
+Accept: application/json
+Content-type: application/json
+
+{
+  "saldo": "100",
+  "client_id": "1"
+}
+###Deposito gateway
+POST http://localhost:8282/cliente/client/deposito
+Accept: application/json
+Content-type: application/json
+
+{
+  "saldo": "100",
+  "client_id": "1"
+}
+
+###Deposito gateway
+POST http://localhost:8282/cliente/client/deposito
 Accept: application/json
 Content-type: application/json
 
